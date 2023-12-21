@@ -1,0 +1,13 @@
+<h1>Welcome</h1>
+
+
+<mat-card>
+  <ul>
+    <li *ngFor="let awesome of awesomes$ | async; let last = last">
+      <h2>
+        {{ awesome['title'] }}
+      </h2>
+      <mat-divider *ngIf="!last"></mat-divider>
+    </li>
+  </ul>
+</mat-card>
